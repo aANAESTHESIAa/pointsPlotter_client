@@ -79,7 +79,7 @@
                 let ZEROCLASSPOINTS = JSON.parse(ZERODATASET);
 
                 let SECONDDATASET = '<?php echo $seconddatasetjson;?>';
-                let SECONDLASSPOINTS = JSON.parse(SECONDDATASET);
+                let SECONDСLASSPOINTS = JSON.parse(SECONDDATASET);
 
                 let LINEDATASET = '<?php echo $linedatasetjson;?>';
                 let LINEPOINTS = JSON.parse(LINEDATASET);
@@ -91,7 +91,7 @@
                 let firstClassPhotoIDs = FIRSTCLASSPOINTS.map(function (elem) {
                     return elem.pID;
                 })
-                let secondClassPhotoIDs = SECONDLASSPOINTS.map(function (elem) {
+                let secondClassPhotoIDs = SECONDСLASSPOINTS.map(function (elem) {
                     return elem.pID;
                 })
 
@@ -102,7 +102,7 @@
                 let firstClassAnomalyIDs = FIRSTCLASSPOINTS.map(function (elem) {
                     return elem.aID;
                 })
-                let secondClassAnomalyIDs = SECONDLASSPOINTS.map(function (elem) {
+                let secondClassAnomalyIDs = SECONDСLASSPOINTS.map(function (elem) {
                     return elem.aID;
                 })
 
@@ -175,7 +175,7 @@
                             {
                                 label: 'extra points', // Name the series
                                 showLine: false,
-                                data: SECONDLASSPOINTS, // Specify the data values array
+                                data: SECONDСLASSPOINTS, // Specify the data values array
                                 borderColor: '#00FF00', // Add custom color border
                                 backgroundColor: '#00FF00', // Add custom color background (Points and Fill)
                             },
@@ -213,5 +213,3 @@
 </div>
 </body>
 </html>
-
-<!--https://stackoverflow.com/questions/44990517/displaying-json-data-in-chartjs-->
