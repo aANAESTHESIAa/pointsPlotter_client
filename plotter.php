@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
@@ -58,6 +57,8 @@
     </nav>
     <?php
     // Read JSON file
+    ini_set('memory_limit', '500M');
+    set_time_limit(0);
     $firstdatasetjson = file_get_contents('./data/classone.json');
     $zerodatasetjson = file_get_contents('./data/classzero.json');
     $seconddatasetjson = file_get_contents('./data/classtwo.json');
@@ -85,24 +86,24 @@
 
                 //defining photo_id for dataset
                 let zeroClassPhotoIDs = ZEROCLASSPOINTS.map(function (elem) {
-                    return elem.photo_id;
+                    return elem.pID;
                 })
                 let firstClassPhotoIDs = FIRSTCLASSPOINTS.map(function (elem) {
-                    return elem.photo_id;
+                    return elem.pID;
                 })
                 let secondClassPhotoIDs = SECONDLASSPOINTS.map(function (elem) {
-                    return elem.photo_id;
+                    return elem.pID;
                 })
 
                 //defining anomaly_id for datasets
                 let zeroClassAnomalyIDs = ZEROCLASSPOINTS.map(function (elem) {
-                    return elem.anomaly_id;
+                    return elem.aID;
                 })
                 let firstClassAnomalyIDs = FIRSTCLASSPOINTS.map(function (elem) {
-                    return elem.anomaly_id;
+                    return elem.aID;
                 })
                 let secondClassAnomalyIDs = SECONDLASSPOINTS.map(function (elem) {
-                    return elem.anomaly_id;
+                    return elem.aID;
                 })
 
                 const ctx = document.getElementById('myChart').getContext('2d');
